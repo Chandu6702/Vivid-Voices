@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
+import { ThemeContextProvider } from "@/context/ThemeContext";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,14 +15,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="w-full min-h-screen flex flex-col items-center justify-between bg-white text-black p-4">
-          <Navbar />
-          <main className="flex-grow w-full flex justify-center">
-            <div className="content-wrapper w-full min-w-full">{children}</div>
-          </main>
-          <Footer />
-        </div>
+      <body
+        className={
+          inter.className +
+          " h-svh overflow-hidden px-2 sm:px-4 lg:px-10 xl:px-20"
+        }
+      >
+        <ThemeContextProvider>
+          <ThemeProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
