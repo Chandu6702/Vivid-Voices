@@ -5,7 +5,7 @@ import React, { useContext, useState } from 'react';
 
 const AuthLinks = () => {
     const [open, setOpen] = useState(false);
-    const status = "authenticated";
+    const status = "notauthenticated";
     const { theme } = useContext(ThemeContext);
 
     return (
@@ -38,7 +38,7 @@ const AuthLinks = () => {
             {/* Dropdown Menu */}
             {open && (
                 <div
-                    className={`absolute w-48 h-72 top-14 right-2 text-2xl font-bold bg-opacity-50 shadow-lg rounded-xl p-2 flex flex-col items-center justify-center gap-3 sm:hidden ${theme === "light" ? "bg-neutral-800/5 backdrop-blur-lg text-black" : "bg-white/5 backdrop-blur-md text-white"}`}
+                    className={`absolute w-48 h-72 top-14 right-2 text-2xl font-bold bg-opacity-50 shadow-lg rounded-xl p-2 flex flex-col items-center justify-center gap-3 sm:hidden z-50 ${theme === "light" ? "bg-neutral-800/5 backdrop-blur-lg text-black" : "bg-white/5 backdrop-blur-md text-white"}`}
                 >
                     <Link href="/" className="mb-2 text-lg">Home</Link>
                     <Link href="/about" className="mb-2 text-lg">About</Link>
