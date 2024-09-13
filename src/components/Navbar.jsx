@@ -6,7 +6,7 @@ import AuthLinks from './AuthLinks'
 
 const Navbar = () => {
     return (
-        <div className="w-full flex justify-between items-center h-12 my-1">
+        <div className="w-full flex justify-between items-center border-b-2 border-slate-300/30 h-12 my-1">
             {/* Social Icons: Hidden on tablets and smaller */}
             <div className="social flex-1 gap-2 cursor-pointer hidden lg:flex">
                 <Image src="/facebook.png" alt="facebook" width={24} height={24} />

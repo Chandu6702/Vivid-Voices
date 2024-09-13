@@ -6,7 +6,7 @@ const CategoryList = () => {
     return (
         <div className="categoryList">
             <h1 className="title mt-8 mb-4 text-2xl font-bold">Popular Categories</h1>
-            <div className="categories flex flex-wrap justify-evenly items-center gap-5 text-black">
+            <div className="categories flex flex-wrap justify-around items-center gap-5 text-black">
                 <Link href="/blog?cat=style" className="flex items-center justify-center h-[3rem] w-[8rem] gap-2 p-2 rounded-lg bg-pink-100 hover:bg-pink-200">
                     <div className="w-8 h-8 overflow-hidden rounded-full">
                         <Image

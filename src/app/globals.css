@@ -13,12 +13,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* Ensures padding and borders do not add to element width */
 }
 
 body {
     min-width: 100vw;
-    /* overflow-x: hidden; */
     background-color: var(--bg);
     color: var(--textColor);
     font-family: 'Inter', sans-serif;
