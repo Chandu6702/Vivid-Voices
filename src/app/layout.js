@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       <body
         className={
           inter.className +
-          " max-w-screen-2xl mx-auto h-svh overflow-x-hidden justify-center items-center px-2 sm:px-6 lg:px-10 xl:px-20 2xl:px-24"
+          " max-w-screen-2xl mx-auto h-svh overflow-x-hidden justify-center items-center px-3 sm:px-6 lg:px-10 xl:px-20 2xl:px-24"
         }
       >
         <ThemeContextProvider>
