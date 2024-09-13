@@ -3,7 +3,7 @@ import React from 'react'
 
 const Featured = () => {
     return (
-        <div className='featured mt-8 p-2 sm:p-0'>
+        <div className='featured w-full mt-8 p-2 sm:p-0'>
             <h1 className='title text-2xl'>
                 <strong className='lg:text-3xl'>Hey, Chandu here!</strong> Discover my stories and creative ideas.
             </h1>

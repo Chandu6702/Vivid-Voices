@@ -20,6 +20,12 @@ body {
     background-color: var(--bg);
     color: var(--textColor);
     font-family: 'Inter', sans-serif;
+    max-width: 1600px;
+    /* Limit the body to a maximum width */
+    margin: 0 auto;
+    /* Center the body content */
+    padding: 0 24px;
+    /* Adjust padding for larger screens */
 }
 
 a {
@@ -39,4 +45,12 @@ a {
     --textColor: black;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
+}
+
+/* Ensure larger screen sizes keep alignment */
+@media (min-width: 1600px) {
+    body {
+        padding: 0 10px;
+        /* Adjust padding to fit content within the viewport */
+    }
 }

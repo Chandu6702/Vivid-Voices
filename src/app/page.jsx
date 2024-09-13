@@ -5,12 +5,14 @@ import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
-    <div className="container">
-      <Featured />
-      <CategoryList />
-      <div className="flex gap-8">
-        <CardList />
-        <Menu />
+    <div className="w-full flex justify-center items-center">
+      <div className="container">
+        <Featured />
+        <CategoryList />
+        <div className="flex w-full gap-8">
+          <CardList />
+          <Menu />
+        </div>
       </div>
     </div>
   );

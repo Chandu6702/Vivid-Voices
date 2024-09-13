@@ -38,17 +38,17 @@ const AuthLinks = () => {
             {/* Dropdown Menu */}
             {open && (
                 <div
-                    className={`absolute w-48 h-72 top-14 right-2 text-2xl font-bold bg-opacity-50 shadow-lg rounded-xl p-2 flex flex-col items-center justify-center gap-3 sm:hidden z-50 ${theme === "light" ? "bg-neutral-800/5 backdrop-blur-lg text-black" : "bg-white/5 backdrop-blur-md text-white"}`}
+                    className={`absolute w-48 h-72 top-14 right-2 text-xl font-extrabold shadow-lg rounded-xl p-2 flex flex-col items-center justify-center gap-3 sm:hidden z-50 ${theme === "light" ? "bg-neutral-800/5 backdrop-blur-lg text-black" : "bg-white/5 backdrop-blur-lg text-white"}`}
                 >
-                    <Link href="/" className="mb-2 text-lg">Home</Link>
-                    <Link href="/about" className="mb-2 text-lg">About</Link>
-                    <Link href="/contact" className="mb-2 text-lg">Contact</Link>
+                    <Link href="/" className="mb-2">Home</Link>
+                    <Link href="/about" className="mb-2">About</Link>
+                    <Link href="/contact" className="mb-2">Contact</Link>
                     {status === "notauthenticated" ? (
-                        <Link href='/login' className="mb-2 text-lg">Login</Link>
+                        <Link href='/login' className="mb-2">Login</Link>
                     ) : (
                         <>
-                            <Link href='/write' className="mb-2 text-lg">Write</Link>
-                            <span className="cursor-pointer text-lg">Logout</span>
+                            <Link href='/write' className="mb-2">Write</Link>
+                            <span className="cursor-pointer">Logout</span>
                         </>
                     )}
                 </div>
