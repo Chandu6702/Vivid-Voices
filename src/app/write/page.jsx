@@ -3,6 +3,8 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import "react-quill/dist/quill.bubble.css";
+import 'simplebar/dist/simplebar.min.css';
+import SimpleBar from 'simplebar-react';
 
 const WritePage = () => {
 
@@ -10,11 +12,11 @@ const WritePage = () => {
     const [value, setValue] = useState("");
 
     return (
-        <div className='writeContainer w-full max-w-6xl mx-auto p-4 sm:p-10'>
+        <div className='writeContainer w-full max-w-6xl mx-auto p-4 h-svh sm:p-10'>
             <input
                 type="text"
                 placeholder='Title'
-                className='title mb-6 text-3xl sm:text-5xl lg:text-6xl outline-none border-none bg-transparent placeholder:text-[#b3b3b1] p-2 sm:p-4 w-full'
+                className='title mb-2 text-2xl sm:text-3xl xl:text-5xl outline-none border-none bg-transparent placeholder:text-[#b3b3b1] p-2 sm:p-4 w-full'
             />
 
             <div className='editor relative flex flex-col w-full gap-4'>
@@ -45,13 +47,16 @@ const WritePage = () => {
                     </button>
                 </div>
 
-                <ReactQuill
-                    theme='bubble'
-                    value={value}
-                    onChange={setValue}
-                    placeholder='Tell your story...'
-                    className='textArea w-full h-40 sm:h-64 p-2 sm:p-4 rounded-lg'
-                />
+                {/* SimpleBar wrapping ReactQuill */}
+                <SimpleBar style={{ maxHeight: '400px' }} className="textArea">
+                    <ReactQuill
+                        theme="bubble"
+                        value={value}
+                        onChange={setValue}
+                        placeholder="Tell your story..."
+                        className="textArea text-base w-full rounded-lg"
+                    />
+                </SimpleBar>
             </div>
         </div>
     )

@@ -1,3 +1,4 @@
+@import "~simplebar/dist/simplebar.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,11 +22,8 @@ body {
     color: var(--textColor);
     font-family: 'Inter', sans-serif;
     max-width: 1600px;
-    /* Limit the body to a maximum width */
     margin: 0 auto;
-    /* Center the body content */
     padding: 0 24px;
-    /* Adjust padding for larger screens */
 }
 
 a {
@@ -47,18 +45,84 @@ a {
     --softTextColor: #626262;
 }
 
+.textArea {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.simplebar-scrollbar {
+    background: var(--softTextColor);
+    border-radius: 10px;
+}
+
+.simplebar-track {
+    background: var(--softBg);
+}
+
+.textArea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.textArea::-webkit-scrollbar-track {
+    background: var(--softBg);
+}
+
+.textArea::-webkit-scrollbar-thumb {
+    background-color: var(--softTextColor);
+    border-radius: 10px;
+    border: 2px solid var(--softBg);
+}
+
 .ql-container {
+    max-height: 600px;
+    height: auto;
     font-size: 28px !important;
+}
+
+.ql-editor {
+    min-height: 600px;
+    height: 100%;
+    overflow: hidden !important;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .ql-editor.ql-blank::before {
     color: #b3b3b1 !important;
+    font-size: 18px !important;
 }
 
-/* Ensure larger screen sizes keep alignment */
+.ql-editor p {
+    margin-bottom: 1rem;
+}
+
 @media (min-width: 1600px) {
     body {
         padding: 0 10px;
-        /* Adjust padding to fit content within the viewport */
+    }
+}
+
+@media (max-width: 425px) {
+    .ql-container {
+        min-height: 600px;
+        height: auto;
+        font-size: 16px;
+    }
+
+    .ql-editor {
+        min-height: 600px;
+        height: auto;
+        overflow: hidden !important;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 1px !important;
+    }
+
+    .simplebar-scrollbar {
+        width: 8px !important;
+    }
+
+    .textArea::-webkit-scrollbar {
+        width: 3px !important;
     }
 }
