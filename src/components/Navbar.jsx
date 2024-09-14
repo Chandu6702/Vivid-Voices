@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import ThemeToggle from './ThemeToggle'
-import AuthLinks from './AuthLinks'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import ThemeToggle from './ThemeToggle';
+import AuthLinks from './AuthLinks';
 
 const Navbar = () => {
     return (
@@ -23,18 +23,18 @@ const Navbar = () => {
             <div className="links flex-1 items-center justify-end text-lg gap-3 lg:gap-2 cursor-pointer hidden sm:flex">
                 <ThemeToggle />
                 <Link href="/">Home</Link>
-                <Link href="/">Contact</Link>
-                <Link href="/">About</Link>
-                <AuthLinks />
+                <Link href="/contact">Contact</Link>
+                <Link href="/about">About</Link>
+                <AuthLinks showWriteAndLogout={true} />
             </div>
 
+            {/* Hamburger for mobile */}
             <div className="hamburger sm:hidden items-center flex gap-3">
                 <ThemeToggle />
-                <AuthLinks />
+                <AuthLinks showWriteAndLogout={false} />
             </div>
         </div>
+    );
+};
 
-    )
-}
-
-export default Navbar
+export default Navbar;
