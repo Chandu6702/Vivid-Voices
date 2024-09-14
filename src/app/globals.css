@@ -47,6 +47,14 @@ a {
     --softTextColor: #626262;
 }
 
+.ql-container {
+    font-size: 28px !important;
+}
+
+.ql-editor.ql-blank::before {
+    color: #b3b3b1 !important;
+}
+
 /* Ensure larger screen sizes keep alignment */
 @media (min-width: 1600px) {
     body {

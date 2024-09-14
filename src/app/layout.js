@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <ThemeContextProvider>
           <ThemeProvider>
             <Navbar />
-            <div className="flex justify-center">{children}</div>
+            <div className="flex justify-center h-svh">{children}</div>
             <Footer />
           </ThemeProvider>
         </ThemeContextProvider>
