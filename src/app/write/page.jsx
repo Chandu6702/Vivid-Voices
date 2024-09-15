@@ -1,15 +1,30 @@
 "use client"
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
 import "react-quill/dist/quill.bubble.css";
 import 'simplebar/dist/simplebar.min.css';
 import SimpleBar from 'simplebar-react';
+import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 
 const WritePage = () => {
 
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState("");
+
+    const { status } = useSession();
+    const router = useRouter();
+
+    useEffect(() => {
+        if (status === "unauthenticated") {
+            router.push("/");
+        }
+    }, [status, router]);
+
+    if (status === "loading") {
+        return <div className="loading">Loading....</div>;
+    }
 
     return (
         <div className='writeContainer w-full max-w-6xl mx-auto p-4 h-svh sm:p-10'>

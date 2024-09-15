@@ -1,12 +1,12 @@
 "use client";
 import { ThemeContext } from '@/context/ThemeContext';
-import { signOut } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 
 const AuthLinks = ({ showWriteAndLogout }) => {
     const [open, setOpen] = useState(false);
-    const status = "authenticated";
+    const { status } = useSession();
     const { theme } = useContext(ThemeContext);
 
     return (
