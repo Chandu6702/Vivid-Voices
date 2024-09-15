@@ -9,7 +9,7 @@ const Featured = () => {
             </h1>
             <div className='post  mt-5 sm:mt-8 sm:flex gap-5 lg:gap-10 justify-between w-full'>
                 <div className='imageContainer flex-1 relative h-56 sm:h-60 lg:h-80'>
-                    <Image src='/p1.jpeg' alt="" fill className='object-cover' />
+                    <Image src='/p1.jpeg' alt="" fill priority className='object-cover' />
                 </div>
                 <div className="textContainer mt-2 sm:mt-0 relative flex flex-1 flex-col text-justify gap-3 overflow-hidden lg:gap-6">
                     <h1 className='postTitle text-xl font-bold lg:text-2xl lg:mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit amet sit.</h1>

@@ -1,5 +1,6 @@
 "use client";
 import { ThemeContext } from '@/context/ThemeContext';
+import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 
@@ -39,7 +40,7 @@ const AuthLinks = ({ showWriteAndLogout }) => {
                     {status === "authenticated" ? (
                         <>
                             <Link href='/write' className="mb-2">Write</Link>
-                            <span className="cursor-pointer">Logout</span>
+                            <span className="cursor-pointer" onClick={signOut}>Logout</span>
                         </>
                     ) : (
                         <Link href='/login' className="mb-2">Login</Link>
@@ -54,7 +55,7 @@ const AuthLinks = ({ showWriteAndLogout }) => {
                     {status === "authenticated" ? (
                         <>
                             <Link href='/write' className="cursor-pointer">Write</Link>
-                            <span className="cursor-pointer">Logout</span>
+                            <span className="cursor-pointer" onClick={signOut}>Logout</span>
                         </>
                     ) : (
                         <Link href='/login' className="mr-4">Login</Link>
