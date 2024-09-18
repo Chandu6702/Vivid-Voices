@@ -6,10 +6,10 @@ import Menu from "@/components/Menu";
 export default function Home({ searchParams }) {
   const page = parseInt(searchParams.page) || 1;
   return (
-    <div className="container">
+    <div className="container min-w-full">
       <Featured />
       <CategoryList />
-      <div className="flex w-full gap-8">
+      <div className="flex w-full justify-between gap-8">
         <CardList page={page} />
         <Menu />
       </div>

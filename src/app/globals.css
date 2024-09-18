@@ -4,125 +4,125 @@
 @tailwind utilities;
 
 :root {
-    --bg: #EFEFEF;
-    --textColor: black;
-    --softBg: #f0f0f0;
-    --softTextColor: #626262;
+  --bg: #EFEFEF;
+  --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-width: 100vw;
-    background-color: var(--bg);
-    color: var(--textColor);
-    font-family: 'Inter', sans-serif;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 24px;
+  min-width: 100vw;
+  background-color: var(--bg);
+  color: var(--textColor);
+  font-family: 'Inter', sans-serif;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .dark {
-    --bg: #0f172a;
-    --textColor: #ddd;
-    --softBg: #1f273a;
-    --softTextColor: #a6a6a6;
+  --bg: #0f172a;
+  --textColor: #ddd;
+  --softBg: #1f273a;
+  --softTextColor: #a6a6a6;
 }
 
 .light {
-    --bg: rgba(248, 243, 243, 0.935);
-    --textColor: black;
-    --softBg: #f0f0f0;
-    --softTextColor: #626262;
+  --bg: rgba(248, 243, 243, 0.935);
+  --textColor: black;
+  --softBg: #f0f0f0;
+  --softTextColor: #626262;
 }
 
 .textArea {
-    max-height: 600px;
-    overflow-y: auto;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 .simplebar-scrollbar {
-    background: var(--softTextColor);
-    border-radius: 10px;
+  background: var(--softTextColor);
+  border-radius: 10px;
 }
 
 .simplebar-track {
-    background: var(--softBg);
+  background: var(--softBg);
 }
 
 .textArea::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 .textArea::-webkit-scrollbar-track {
-    background: var(--softBg);
+  background: var(--softBg);
 }
 
 .textArea::-webkit-scrollbar-thumb {
-    background-color: var(--softTextColor);
-    border-radius: 10px;
-    border: 2px solid var(--softBg);
+  background-color: var(--softTextColor);
+  border-radius: 10px;
+  border: 2px solid var(--softBg);
 }
 
 .ql-container {
-    max-height: 600px;
-    height: auto;
-    font-size: 28px !important;
+  max-height: 600px;
+  height: auto;
+  font-size: 28px !important;
 }
 
 .ql-editor {
-    min-height: 600px;
-    height: 100%;
-    overflow: hidden !important;
-    font-size: 18px;
-    line-height: 1.6;
+  min-height: 600px;
+  height: 100%;
+  overflow: hidden !important;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .ql-editor.ql-blank::before {
-    color: #b3b3b1 !important;
-    font-size: 18px !important;
+  color: #b3b3b1 !important;
+  font-size: 18px !important;
 }
 
 .ql-editor p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1600px) {
-    body {
-        padding: 0 10px;
-    }
+  body {
+    padding: 0 10px;
+  }
 }
 
 @media (max-width: 425px) {
-    .ql-container {
-        min-height: 600px;
-        height: auto;
-        font-size: 16px;
-    }
+  .ql-container {
+    min-height: 600px;
+    height: auto;
+    font-size: 16px;
+  }
 
-    .ql-editor {
-        min-height: 600px;
-        height: auto;
-        overflow: hidden !important;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 1px !important;
-    }
+  .ql-editor {
+    min-height: 600px;
+    height: auto;
+    overflow: hidden !important;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 1px !important;
+  }
 
-    .simplebar-scrollbar {
-        width: 8px !important;
-    }
+  .simplebar-scrollbar {
+    width: 8px !important;
+  }
 
-    .textArea::-webkit-scrollbar {
-        width: 3px !important;
-    }
+  .textArea::-webkit-scrollbar {
+    width: 3px !important;
+  }
 }
