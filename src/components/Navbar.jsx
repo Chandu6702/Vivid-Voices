@@ -16,15 +16,16 @@ const Navbar = () => {
 
       {/* Logo: Centered by default, moves left on tablet */}
       <div className="logo flex-1 text-left lg:text-center text-xl md:text-3xl font-bold">
-        Explorer
+        Vivid Voices
       </div>
 
       {/* Links: Shown on desktop, hidden on mobile */}
       <div className="links flex-1 items-center justify-end text-lg gap-3 lg:gap-2 cursor-pointer hidden sm:flex">
         <ThemeToggle />
         <Link href="/">Home</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/about">About</Link>
+        <Link href="/blog">Blogs</Link>
+        {/* <Link href="/contact">Contact</Link> */}
+        {/* <Link href="/about">About</Link> */}
         <AuthLinks showWriteAndLogout={true} />
       </div>
 

@@ -29,7 +29,7 @@ const Card = ({ key, item }) => {
             </h1>
           </Link>
           <p className='text-xs text-justify font-medium mb-2 lg:text-sm'>
-            {item.desc.substring(0, 60)}
+            {item.desc.substring(0, 450)}
           </p>
           <Link href={`/posts/${item.slug}`} className='border-b-[1px] pb-[1px] border-rose-400 text-sm w-max'>
             Read More...

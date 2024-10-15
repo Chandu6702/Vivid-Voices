@@ -38,7 +38,7 @@ const SinglePage = async ({ params }) => {
                 {data?.user.name}
               </span>
               <span className='date text-sm lg:text-base font-semibold'>
-                13.09.2024
+                {data.createdAt.substring(0, 10)}
               </span>
             </div>
           </div>

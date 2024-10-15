@@ -8,11 +8,11 @@ const BlogPage = ({ searchParams }) => {
   return (
     <div className='blogpage w-full'>
       <h1 className='title w-full text-black text-2xl text-center font-semibold p-2 mt-5 bg-pink-100 capitalize'>
-        {cat} Blog
+        {cat} Blogs
       </h1>
       <div className='content flex justify-between gap-12'>
         <CardList page={page} cat={cat} />
-        <Menu />
+        {/* <Menu /> */}
       </div>
     </div>
   )

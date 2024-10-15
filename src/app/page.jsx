@@ -11,7 +11,7 @@ export default function Home({ searchParams }) {
       <CategoryList />
       <div className="flex w-full justify-between gap-8">
         <CardList page={page} />
-        <Menu />
+        {/* <Menu /> */}
       </div>
     </div>
   );
